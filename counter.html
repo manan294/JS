@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CountDown</title>
+    <style>
+      body {
+        background-color: rgba(128, 0, 255, 0.105);
+        display: flex;
+        justify-content: center;
+      }
+      span {
+        color: rgb(15, 14, 1);
+        border: 5px solid black;
+        font-size: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span id="hours">00</span>
+      <span id="min">00</span>
+      <span id="sec">00</span>
+    </div>
+    <script>
+      let count = 0;
+      let min = 0;
+      let hours = 0;
+
+      function addSeconds() {
+        count++;
+        if (count == 60) {
+          addMinutes();
+          count = 0;
+        }
+        if (min == 60) {
+          addHours();
+          min = 0;
+        }
+        if (hours == 12) {
+          hours = 0;
+        }
+
+        count = count < 10 ? "0" + count : count;
+        document.getElementById("sec").innerHTML = count;
+      }
+
+      function addMinutes() {
+        min++;
+        min = min < 10 ? "0" + min : min;
+        document.getElementById("min").innerHTML = min;
+      }
+      function addHours() {
+        hours++;
+        hours = hours < 10 ? "0" + hours : hours;
+        document.getElementById("hours").innerHTML = hours;
+      }
+      setInterval(addSeconds, 1000);
+    </script>
+  </body>
+</html>

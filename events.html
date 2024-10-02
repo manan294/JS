@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- (1) -->
+    <input type="text" id="name" />
+    <p id="demo"></p>
+    <button id="btn1">1</button>
+    <button id="btn2" ondblclick="abc()">2</button>
+    <script>
+      document.getElementById("btn1").onclick = function () {
+        let name = document.getElementById("name").value;
+        document.getElementById("demo").innerHTML = "Your Name is " + name;
+        document.getElementById("btn1").style.color = "blue";
+        document.getElementById("demo").style.color = "red";
+        document.getElementById("demo").style.fontSize = "2rem";
+      };
+
+      function abc() {
+        alert("Hello");
+      }
+    </script>
+    <hr />
+    <hr />
+    <!-- (2) -->
+    <button name="btn1" type="button" onclick="adddata()">Click</button>
+    <button name="btn2" type="button" onclick="checkData()">
+      Array function
+    </button>
+    <!-- -------------------------------------------------------------------- -->
+    <script>
+      // (1) Using Event Constructor
+      const myevent = new Event("myFirstEvent");
+
+      document.addEventListener("myFirstEvent", () => {
+        document.write("My First Event is Calling...");
+      });
+      function adddata() {
+        document.dispatchEvent(myevent);
+        // document.dispatchEvent(event2);
+        window.print();
+      }
+
+      //   (2) Using Custom Event
+      const event2 = new CustomEvent("mysecondevent", {
+        // details:"Himil"
+        details: {
+          name: "Himil",
+          age: 25,
+          salary: 25000,
+        },
+      });
+
+      document.addEventListener("mysecondevent", (data) => {
+        document.write("${data.details.name}");
+      });
+      function checkData() {
+        window.location.href = "lab_work.html";
+      }
+    </script>
+  </body>
+</html>

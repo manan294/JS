@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 2</title>
+  </head>
+  <body>
+    <script>
+
+
+      let ch = "@";
+
+      if ((ch >= "a" && ch <= "z") || (ch >= "A" && ch <= "Z")) {
+        document.write("<hr><hr>Input Character is Alphabet<hr><hr>");
+      } else if (ch >= "0" && ch <= "9") {
+        document.write("<hr><hr>Input Character is Digit<hr><hr>");
+      } else {
+        document.write("<hr><hr>Input Character is Special Character <hr><hr>");
+      }
+
+
+      let number = 5;
+      number % 2 == 0
+        ? document.write("Number is Even<hr><hr>")
+        : document.write("Number is Odd<hr><hr>");
+
+
+      let a = 50,
+        b = 45,
+        c = 75,
+        d = 100;
+
+      if (a > b) {
+        if (a > c) {
+          if (a > d) {
+            document.write("A is Maximum<hr><hr>");
+          } else {
+            document.write("D is Maximum<hr><hr>");
+          }
+        } else {
+          if (c > d) {
+            document.write("C is Maximum<hr><hr>");
+          } else {
+            document.write("D is Maximum<hr><hr>");
+          }
+        }
+      } else {
+        if (b > c) {
+          if (b > d) {
+            document.write("B is Maximum<hr><hr>");
+          } else {
+            document.write("D is Maximum<hr><hr>");
+          }
+        } else {
+          if (c > d) {
+            document.write("C is Maximum<hr><hr>");
+          } else {
+            document.write("D is Maximum<hr><hr>");
+          }
+        }
+      }
+
+
+      let day = "F";
+
+      switch (day) {
+        case "M":
+          document.write("Monday<hr><hr>");
+          break;
+
+        case "T":
+          document.write("Tuesday<hr><hr>");
+          break;
+
+        case "W":
+          document.write("Wednesday<hr><hr>");
+          break;
+
+        case "t":
+          document.write("Thursday<hr><hr>");
+          break;
+
+        case "F":
+          document.write("Friday<hr><hr>");
+
+          break;
+
+        case "S":
+          document.write("Saturday<hr><hr>");
+          break;
+
+        case "s":
+          document.write("Sunday<hr><hr>");
+          break;
+      }
+
+
+      let unit = 45;
+      let bill;
+
+      if (unit >= 0 && unit <= 50) {
+        bill = unit * 0.5;
+      } else if (unit >= 51 && unit <= 150) {
+        bill = 25 + (unit - 50) * 0.75;
+      } else if (unit >= 151 && unit <= 250) {
+        bill = 100 + (unit - 150) * 1.2;
+      } else {
+        bill = 220 + (unit - 250) * 1.5;
+      }
+      //   bill += (bill * 20) / 100;
+      charge = (bill * 20) / 100;
+      finalBill = bill + charge;
+      document.write("Total Bill " + finalBill + "<hr><hr>");
+
+
+      let value = -8;
+      value > 0
+        ? document.write("Positive<hr><hr>")
+        : value < 0
+        ? document.write("Negative<hr><hr>")
+        : document.write("Zero<hr><hr>");
+
+
+      let value1 = 45,
+        value2 = 4;
+
+      if (value1 > value2) {
+        document.write("Value1 is Greater<hr><hr>");
+      } else if (value1 == value2) {
+        document.write("Value1 and Value2 is Same<hr><hr>");
+      } else {
+        document.write("Value2 is Greater<hr><hr>");
+      }
+
+
+      let salary = 15000;
+
+      if (salary >= 1000 && salary < 5000) {
+        salary += 1000;
+      } else if (salary >= 5000 && salary < 10000) {
+        salary += 2000;
+      } else if (salary >= 10000 && salary < 20000) {
+        salary += 3000;
+      } else if (salary >= 20000 && salary < 50000) {
+        salary += 4000;
+      } else {
+        document.write("No increment");
+      }
+      document.write("Final Salary is " + salary + "<hr><hr>");
+
+    </script>
+  </body>
+</html>

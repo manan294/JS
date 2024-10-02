@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3><u>First Program</u></h3>
+    <button name="btn" id="btn" onclick="add(2,3)">Addition</button><br /><br />
+    <button name="btn" id="btn" onclick="sub(5,6)">Substraction</button
+    ><br /><br />
+    <button name="btn" id="btn" onclick="mul(5,6)">Multiplication</button
+    ><br /><br />
+    <button name="btn" id="btn" onclick="div(10,2)">Division</button
+    ><br />
+
+    <h3><u>Second Program</u></h3>
+    <p id="area1"></p>
+    <p id="area2"></p>
+    <p id="area3"></p>
+
+    <h3><u>Third Program</u></h3>
+    <p id="mtf"></p>
+    <p id="ctf"></p>
+    <p id="dtr"></p>
+
+    <script>
+      function add(a, b) {
+        document.write("Addition is " + (a + b));
+      }
+      function sub(c, d) {
+        document.write("Substraction is " + (c - d));
+      }
+      function mul(e, f) {
+        document.write("Multiplication is " + e * f);
+      }
+      function div(g, h) {
+        document.write("Division is " + g / h);
+      }
+
+      // Area of Circle
+      function circleArea() {
+        let pi = 3.14;
+        let r = 27;
+        return pi * r ** 2;
+      }
+      document.getElementById("area1").innerHTML =
+        "Area of Circle is " + circleArea();
+
+      // Area of Rectangle
+      function Rectangle(l, b) {
+        return l * b;
+      }
+      document.getElementById("area2").innerHTML =
+        "Area of Rectangle is " + Rectangle(50, 30);
+
+      // Area of Triangle
+      function trianlge(b, h) {
+        return (1 / 2) * b * h;
+      }
+      document.getElementById("area3").innerHTML =
+        "Area of Triangle is " + trianlge(50, 15);
+
+      function meterTofoot(m) {
+        let f = m * 3.28;
+        return f;
+      }
+      document.getElementById("mtf").innerHTML =
+        "Meter to Foot is " + meterTofoot(25);
+
+      function celsiusTofehrenhite(cel) {
+        let fer = cel * (9 / 5) + 32;
+        return fer;
+      }
+      document.getElementById("ctf").innerHTML =
+        "Celsius to Fehrenhite is " + celsiusTofehrenhite(20);
+
+      function dollarTorupees(dollar) {
+        let rupee = dollar * 82.08;
+        return rupee;
+      }
+      document.getElementById("dtr").innerHTML =
+        "Dollar to Rupee is " + dollarTorupees(80);
+    </script>
+  </body>
+</html>
